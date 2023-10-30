@@ -1,0 +1,24 @@
+<div style="padding: 0px 10px" class="chat-dialog">
+  <div
+    class="chat"
+    *ngFor="let message of messages; let index = index"
+    [ngClass]="{
+      'input-message': index % 2 === 0,
+      'response-message': index % 2 !== 0
+    }"
+  >
+    <div style="display: flex; gap: 5px" class="message-container">
+      <!-- Add profile icon here -->
+      <div class="profile-icon" *ngIf="index % 2 !== 0">
+        <!-- Add your profile icon image or icon element here -->
+        <img style="height: 30px; width: 30px" src="../../assets/icon.png" />
+      </div>
+      <div>
+        <app-message
+          style="background-color: aqua"
+          [text]="message"
+        ></app-message>
+      </div>
+    </div>
+  </div>
+</div>

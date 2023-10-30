@@ -1,0 +1,14 @@
+.chat {
+  display: flex;
+  margin: 10px 0;
+}
+
+.input-message {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.response-message {
+  justify-content: flex-start;
+  text-align: left;
+}

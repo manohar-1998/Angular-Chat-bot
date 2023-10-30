@@ -1,0 +1,51 @@
+<div class="main-container">
+  <div
+    class="top-bar"
+    style="
+      display: flex;
+      height: 32px;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 15px;
+      justify-content: space-between;
+      box-shadow: 5px 5px 10px rgb(201, 198, 198);
+    "
+  >
+    <!-- Logo Section-->
+    <div>
+      <img style="height: 30px; width: 30px" src="../../assets/icon.png" />
+    </div>
+    <!-- Profile Section-->
+    <div style="display: flex; align-items: center">
+      <img style="height: 30px; width: 30px" src="../../assets/icon.png" />
+      <div style="margin-left: 5px">M-Bot</div>
+    </div>
+  </div>
+  <div class="content" style="display: flex; height: calc(100vh - 32px)">
+    <div
+      class="side-bar"
+      id="sidebar"
+      style="
+        background-color: whitesmoke;
+        background-color: blue;
+        width: 64px;
+        color: white;
+      "
+    >
+      Side bar
+    </div>
+    <div
+      class="chat-bot"
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 20px 30px;
+      "
+    >
+      <!-- TODO - Need to show this as a Chat Interface in first Div -->
+      <div style="text-align: center"></div>
+      <app-chat-container></app-chat-container>
+    </div>
+  </div>
+</div>
