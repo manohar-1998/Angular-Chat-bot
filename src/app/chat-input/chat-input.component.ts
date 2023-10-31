@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { ChatService } from '../chat.service';
 
 @Component({
@@ -7,11 +7,14 @@ import { ChatService } from '../chat.service';
 })
 export class ChatInputComponent {
   message: string = '';
+  @Output() sendMessageFlag = new EventEmitter<boolean>();
 
   constructor(private chatService: ChatService) {}
 
   sendMessage(): void {
     if (this.message) {
+      // Emit a flag with a boolean value (false in this case)
+      this.sendMessageFlag.emit(false);
       this.chatService.sendMessage(this.message);
       this.message = '';
     }

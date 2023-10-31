@@ -1,0 +1,60 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: blue;
+  text-align: center;
+  border-radius: 10px;
+
+  .sidebar-container {
+    margin-top: 1rem;
+    .expanded-sidebar {
+      .centered-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 60px;
+        cursor: pointer;
+
+        div {
+          flex: 2;
+
+          i {
+            font-size: 36px;
+            color: white;
+          }
+        }
+
+        .label {
+          font-size: 18px;
+          margin-left: 5px;
+          color: white;
+          flex: 3;
+          text-align: left;
+        }
+      }
+    }
+
+    .collapsed-sidebar {
+      div {
+        height: 60px;
+        i {
+          font-size: 36px;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .sidebar-indicator {
+    text-align: center;
+
+    .icon-size {
+      cursor: pointer;
+      color: white;
+      border-radius: 20px;
+    }
+  }
+}

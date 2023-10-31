@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { ChatService } from './chat.service';
 import { ChatContainerComponent } from './chat-container/chat-container.component';
 import { HomeComponent } from './home/home.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HomeComponent } from './home/home.component';
     MessageComponent,
     ChatContainerComponent,
     HomeComponent,
+    SideBarComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [ChatService],

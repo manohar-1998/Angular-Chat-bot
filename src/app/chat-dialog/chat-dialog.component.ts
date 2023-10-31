@@ -13,5 +13,6 @@ export class ChatDialogComponent implements OnInit {
 
   ngOnInit(): void {
     this.messages = this.chatService.getMessages();
+    console.log('Message Length =', this.messages);
   }
 }

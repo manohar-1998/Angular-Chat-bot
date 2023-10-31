@@ -1,5 +1,5 @@
 import { style, transition, trigger, animate } from '@angular/animations';
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +19,24 @@ import { Component } from '@angular/core';
     ]),
   ],
 })
-export class HomeComponent {
-  expanded: boolean = true;
+export class HomeComponent implements OnInit {
+  isCollapsed: boolean = true;
+
+  @Input() item!: boolean;
+
+  ngOnInit(): void {
+    console.log('Flag check in parent =', this.item);
+  }
+  showDiv: boolean = true;
+
+  hideDiv(flag: boolean) {
+    // Set the showDiv variable based on the flag value
+    this.showDiv = flag;
+  }
+  // @Output() flagChanged = new EventEmitter<boolean>();
+  toggle() {
+    // If collapse is true, expand is false and vice versa
+
+    this.isCollapsed = !this.isCollapsed;
+  }
 }
