@@ -1,4 +1,4 @@
-<div style="padding: 0px 10px" class="chat-dialog">
+<div style="padding: 0px 10px; overflow-y: auto" class="chat-dialog">
   <div
     class="chat"
     *ngFor="let message of messages; let index = index"
@@ -14,10 +14,22 @@
         <img style="height: 30px; width: 30px" src="../../assets/icon.png" />
       </div>
       <div>
-        <app-message
-          style="background-color: aqua"
-          [text]="message"
-        ></app-message>
+        <div class="message">
+          <div style="font-size: small">
+            {{ "John Doe " }}{{ day }}{{ " " }}{{ date }}
+          </div>
+          <div
+            [style.float]="index % 2 == 0 ? 'right' : 'none'"
+            style="
+              background-color: rgb(205, 229, 248);
+              width: fit-content;
+              padding: 5px 10px;
+              border-radius: 5px;
+            "
+          >
+            {{ message }}
+          </div>
+        </div>
       </div>
     </div>
   </div>

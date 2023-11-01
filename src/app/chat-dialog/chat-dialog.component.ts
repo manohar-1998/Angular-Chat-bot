@@ -8,6 +8,9 @@ import { ChatService } from '../chat.service';
 })
 export class ChatDialogComponent implements OnInit {
   messages: string[] = [];
+  currentDate = new Date();
+  date = this.currentDate.toLocaleTimeString();
+  day = this.currentDate.toLocaleDateString('en-US', { weekday: 'long' });
 
   constructor(private chatService: ChatService) {}
 

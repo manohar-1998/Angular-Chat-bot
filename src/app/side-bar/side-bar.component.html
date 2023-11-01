@@ -1,46 +1,49 @@
 <div
   style="height: calc(100vh - 50px)"
   class="sidebar"
-  [style.width.px]="isCollapsed ? 80 : 200"
+  [style.width.px]="isCollapsed ? 70 : 200"
 >
   <!-- Div container when sidebar expanded -->
-  <div class="sidebar-container">
+  <div class="sidebar-container" style="text-align: center">
     <div class="expanded-sidebar" *ngIf="!isCollapsed">
-      <div class="centered-content">
-        <div>
-          <i class="material-icons">chat</i>
-        </div>
-
-        <div class="label">Chat</div>
-      </div>
-      <div class="centered-content">
-        <div>
-          <i class="material-icons">smart_toy</i>
-        </div>
-
-        <div class="label">Bot</div>
-      </div>
-      <div class="centered-content">
-        <div>
-          <i class="material-icons">settings</i>
-        </div>
-
-        <div class="label">Settings</div>
-      </div>
-      <div class="centered-content">
-        <div>
-          <i class="material-icons">library_books</i>
-        </div>
-
-        <div class="label">Knowledge</div>
-      </div>
+      <div
+        style="
+          background-color: #d9d9d9;
+          height: 30px;
+          width: 30px;
+          border-radius: 10px;
+        "
+      ></div>
+      <div
+        style="
+          background-color: #d9d9d9;
+          height: 30px;
+          width: 30px;
+          margin-top: 15px;
+          border-radius: 10px;
+        "
+      ></div>
+      <div></div>
     </div>
     <!-- Div container when sidebar not expanded -->
     <div class="collapsed-sidebar" *ngIf="isCollapsed">
-      <div><i class="material-icons">chat</i></div>
-      <div><i class="material-icons">smart_toy</i></div>
-      <div><i class="material-icons">settings</i></div>
-      <div><i class="material-icons">library_books</i></div>
+      <div
+        style="
+          background-color: #d9d9d9;
+          height: 30px;
+          width: 30px;
+          border-radius: 10px;
+        "
+      ></div>
+      <div
+        style="
+          background-color: #d9d9d9;
+          height: 30px;
+          width: 30px;
+          margin-top: 15px;
+          border-radius: 10px;
+        "
+      ></div>
     </div>
   </div>
   <div class="sidebar-indicator">

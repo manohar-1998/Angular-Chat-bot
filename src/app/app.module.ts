@@ -5,24 +5,28 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChatDialogComponent } from './chat-dialog/chat-dialog.component';
 import { ChatInputComponent } from './chat-input/chat-input.component';
-import { MessageComponent } from './message/message.component';
 import { FormsModule } from '@angular/forms';
 import { ChatService } from './chat.service';
 import { ChatContainerComponent } from './chat-container/chat-container.component';
 import { HomeComponent } from './home/home.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChatDialogComponent,
     ChatInputComponent,
-    MessageComponent,
     ChatContainerComponent,
     HomeComponent,
     SideBarComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+  ],
   providers: [ChatService],
   bootstrap: [AppComponent],
 })

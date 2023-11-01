@@ -3,12 +3,14 @@
   <div class="top-bar">
     <!-- Logo Section-->
     <div class="logo-container">
-      <img class="logo" src="../../assets/icon.png" />
+      <img class="logo" src="../../assets/i-india_logo.png" />
     </div>
     <!-- Profile Section-->
     <div class="profile-container">
-      <img class="profile" src="../../assets/icon.png" />
-      <div class="name-label">M-Bot</div>
+      <!-- <img class="profile" src="../../assets/icon.png" /> -->
+      <div
+        style="padding: 15px; background-color: #d9d9d9; border-radius: 10px"
+      ></div>
     </div>
   </div>
   <div class="content-container">
@@ -16,25 +18,41 @@
     <app-side-bar></app-side-bar>
     <!-- Chat Content -->
     <div class="chat-bot">
-      <!-- TODO - Need to show this as a Chat Interface in first Div -->
       <div
         style="
-          flex: 6;
           display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
+          justify-content: space-between;
+          border-bottom: 1px solid #b3b3b3;
+          padding: 10px;
+          height: 32px;
         "
       >
-        <div style="font-size: 20px; font-weight: 500">
-          You're starting a new conversation
+        <div style="display: flex; flex-direction: column; color: #676767">
+          <span
+            style="margin: 0; padding: 0; font-size: 16px; font-weight: 500"
+          >
+            Introduction to Indian History
+          </span>
+          <span
+            style="font-size: 10px; margin: 0; padding: 0; line-height: 10px"
+            >Course/Module/Lesson</span
+          >
         </div>
-        <div style="font-size: 16px; margin-top: 1rem">
-          Type your first message below.
-        </div>
+        <div
+          style="background-color: #d9d9d9; border-radius: 10px; padding: 15px"
+        ></div>
       </div>
-      <div style="flex: 1">
-        <app-chat-container></app-chat-container>
+      <div>
+        <div
+          style="
+            position: fixed;
+            bottom: 0;
+            width: calc(100vw - 112px);
+            margin-bottom: 20px;
+          "
+        >
+          <app-chat-container></app-chat-container>
+        </div>
       </div>
     </div>
   </div>
