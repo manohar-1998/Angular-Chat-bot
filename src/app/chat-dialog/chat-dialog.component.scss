@@ -12,3 +12,11 @@
   justify-content: flex-start;
   text-align: left;
 }
+
+div::-webkit-scrollbar {
+  width: 4px; /* Set the desired scrollbar width */
+}
+
+div::-webkit-scrollbar-thumb {
+  background: #888; /* Set the color of the scrollbar color */
+}

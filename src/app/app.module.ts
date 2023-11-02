@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ChatBotComponent } from './chat-bot/chat-bot.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HomeComponent,
     SideBarComponent,
     DashboardComponent,
+    ChatBotComponent,
   ],
   imports: [
     BrowserModule,

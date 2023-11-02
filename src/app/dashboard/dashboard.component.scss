@@ -1,18 +1,58 @@
 .container {
-  width: calc(100vw - 110px);
   .main-container {
     display: flex;
     margin: 20px;
     width: 100%;
     justify-content: space-between;
 
-    .left-container {
-      width: 50%;
-      padding: 10px;
-    }
+    .left-container,
     .right-container {
       width: 50%;
       padding: 10px;
+
+      .reports-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        height: 32px;
+        width: 60%;
+        margin-top: 15px;
+        background-color: #f4f4f4;
+        border-radius: 10px;
+
+        .content-container {
+          display: flex;
+          flex-direction: column;
+          color: #676767;
+
+          .title {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+            font-weight: 500;
+          }
+          .sub-title {
+            font-size: 10px;
+            margin: 0;
+            padding: 0;
+            line-height: 10px;
+          }
+        }
+
+        .icon {
+          background-color: #d9d9d9;
+          border-radius: 10px;
+          padding: 15px;
+          cursor: pointer;
+        }
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: flex-end;
+        width: 60%;
+        margin-top: 15px;
+      }
     }
   }
 }
