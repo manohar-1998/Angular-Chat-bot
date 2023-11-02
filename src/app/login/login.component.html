@@ -82,18 +82,12 @@
             <div class="btn-container">
               <!-- Login button (conditionally displayed) -->
               <div *ngIf="sentOtp" class="send-button-container">
-                <button
-                  style="background-color: grey"
-                  class="btn"
-                  mat-raised-button
-                  (click)="handleLogin()"
-                >
+                <button class="btn" mat-raised-button (click)="handleLogin()">
                   Login
                 </button>
               </div>
               <div class="send-button-container" *ngIf="!sentOtp">
                 <button
-                  style="background-color: grey; color: white"
                   class="btn"
                   mat-raised-button
                   [disabled]="loading"
