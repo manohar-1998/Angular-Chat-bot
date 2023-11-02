@@ -1,0 +1,114 @@
+<div class="container">
+  <div class="main-container">
+    <div class="header">
+      <div class="title">I-India Gen AI Bots</div>
+      <div class="others">
+        <div>Contact</div>
+        <div>About</div>
+      </div>
+    </div>
+    <div class="login-form">
+      <div class="left-container">
+        <img src="../../assets/Landing Graphic.png" />
+      </div>
+      <div class="right-container">
+        <div class="alignments">
+          <div class="input-container">
+            <div style="font-size: 18px; font-weight: 500">Sign In</div>
+            <div class="form-container">
+              <form class="form">
+                <div>
+                  <label>Email Address</label>
+                </div>
+                <div style="margin-top: 5px">
+                  <mat-form-field style="width: 100%">
+                    <mat-label style="font-size: 12px"
+                      >Email your registered email address</mat-label
+                    >
+                    <input
+                      type="email"
+                      matInput
+                      [formControl]="emailFormControl"
+                      placeholder="Ex. user@gmail.com"
+                    />
+                    <mat-error
+                      *ngIf="
+                        emailFormControl.hasError('email') &&
+                        !emailFormControl.hasError('required')
+                      "
+                    >
+                      Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                      Email is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div *ngIf="sentOtp">
+                  <label>OTP</label>
+                </div>
+                <div>
+                  <div style="margin-top: 5px">
+                    <mat-form-field
+                      [@fadeInOut]
+                      *ngIf="sentOtp"
+                      style="width: 100%"
+                    >
+                      <mat-label style="font-size: 12px"
+                        >One Time Password</mat-label
+                      >
+                      <input
+                        type="email"
+                        matInput
+                        [formControl]="emailFormControl"
+                        placeholder="Ex. user@gmail.com"
+                      />
+                      <mat-error
+                        *ngIf="
+                          emailFormControl.hasError('email') &&
+                          !emailFormControl.hasError('required')
+                        "
+                      >
+                        Please enter a valid email address
+                      </mat-error>
+                      <mat-error *ngIf="emailFormControl.hasError('required')">
+                        Email is <strong>required</strong>
+                      </mat-error>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="btn-container">
+              <!-- Login button (conditionally displayed) -->
+              <div *ngIf="sentOtp" class="send-button-container">
+                <button
+                  style="background-color: grey"
+                  class="btn"
+                  mat-raised-button
+                  (click)="handleLogin()"
+                >
+                  Login
+                </button>
+              </div>
+              <div class="send-button-container" *ngIf="!sentOtp">
+                <button
+                  style="background-color: grey; color: white"
+                  class="btn"
+                  mat-raised-button
+                  [disabled]="loading"
+                  (click)="handleEmailVerification()"
+                >
+                  <span *ngIf="!loading">Send OTP</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copy-rights">
+          Copyright &copy; Quadratics Insights Pvt. Ltd.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

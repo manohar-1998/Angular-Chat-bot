@@ -4,6 +4,7 @@ import { ChatContainerComponent } from './chat-container/chat-container.componen
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ChatBotComponent } from './chat-bot/chat-bot.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
         component: ChatBotComponent,
       },
     ],
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   },
 ];
 
