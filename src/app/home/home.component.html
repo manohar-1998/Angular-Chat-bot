@@ -17,7 +17,11 @@
     <!-- Side Bar -->
     <app-side-bar></app-side-bar>
     <!-- Chat Content -->
-    <div class="chat-bot">
+    <router-outlet>
+      <app-dashboard></app-dashboard>
+    </router-outlet>
+
+    <!-- <div class="chat-bot">
       <div
         style="
           display: flex;
@@ -54,6 +58,6 @@
           <app-chat-container></app-chat-container>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>

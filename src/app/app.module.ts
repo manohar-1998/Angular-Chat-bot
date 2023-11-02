@@ -11,6 +11,7 @@ import { ChatContainerComponent } from './chat-container/chat-container.componen
 import { HomeComponent } from './home/home.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ChatContainerComponent,
     HomeComponent,
     SideBarComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
