@@ -16,6 +16,7 @@ import { ChatBotComponent } from './chat-bot/chat-bot.component';
 import { LoginComponent } from './login/login.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     MatInputModule,
     MatButtonModule,
+    MatIconModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

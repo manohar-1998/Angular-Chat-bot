@@ -1,5 +1,5 @@
 import { style, transition, trigger, animate } from '@angular/animations';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -24,6 +24,8 @@ export class HomeComponent implements OnInit {
 
   @Input() item!: boolean;
 
+  constructor(private renderer: Renderer2, private el: ElementRef) {}
+
   ngOnInit(): void {
     console.log('Flag check in parent =', this.item);
   }
@@ -38,5 +40,18 @@ export class HomeComponent implements OnInit {
     // If collapse is true, expand is false and vice versa
 
     this.isCollapsed = !this.isCollapsed;
+  }
+  openNav() {
+    const sideNavElement = this.el.nativeElement.querySelector('#mySidenav');
+    if (sideNavElement) {
+      this.renderer.setStyle(sideNavElement, 'width', '250px');
+    }
+  }
+
+  closeNav() {
+    const sideNavElement = this.el.nativeElement.querySelector('#mySidenav');
+    if (sideNavElement) {
+      this.renderer.setStyle(sideNavElement, 'width', '0');
+    }
   }
 }

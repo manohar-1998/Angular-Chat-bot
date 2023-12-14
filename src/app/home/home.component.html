@@ -2,12 +2,21 @@
   <!-- Top Bar -->
   <div class="top-bar">
     <!-- Logo Section-->
+    <!-- <div class="logo-container">
+      <img class="logo" src="../../assets/i-india_logo.png" />
+    </div> -->
+    <!-- Logo Section-->
     <div class="logo-container">
+      <img
+        class="hamburger"
+        src="../../assets/hamburger.png"
+        (click)="openNav()"
+      />
+
       <img class="logo" src="../../assets/i-india_logo.png" />
     </div>
     <!-- Profile Section-->
     <div class="profile-container">
-      <!-- <img class="profile" src="../../assets/icon.png" /> -->
       <div
         style="padding: 15px; background-color: #d9d9d9; border-radius: 10px"
       ></div>
@@ -15,7 +24,15 @@
   </div>
   <div class="content-container">
     <!-- Side Bar -->
-    <app-side-bar></app-side-bar>
+    <app-side-bar class="sidebar"></app-side-bar>
+    <!-- Sidebar for responsive UI -->
+    <div id="mySidenav" class="sidenav">
+      <a class="closebtn" (click)="closeNav()">&times;</a>
+      <a routerLink="/" (click)="closeNav()">Home</a>
+      <a routerLink="/contact" (click)="closeNav()">Contact Us</a>
+      <a routerLink="/about" (click)="closeNav()">About</a>
+      <a routerLink="/services" (click)="closeNav()">Services</a>
+    </div>
     <!-- Chat Content -->
     <div style="width: 100%">
       <router-outlet> </router-outlet>

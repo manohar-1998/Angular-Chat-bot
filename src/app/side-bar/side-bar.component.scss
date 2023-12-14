@@ -4,6 +4,8 @@
   justify-content: space-between;
   background-color: #f4f4f4;
   text-align: center;
+  height: calc(100vh - 64px);
+  width: 64px;
 
   .sidebar-container {
     margin-top: 1rem;

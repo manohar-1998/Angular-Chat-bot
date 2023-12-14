@@ -1,49 +1,52 @@
-<div
-  style="height: calc(100vh - 50px)"
-  class="sidebar"
-  [style.width.px]="isCollapsed ? 70 : 200"
->
+<div class="sidebar" [style.width.px]="isCollapsed ? 64 : 250">
   <!-- Div container when sidebar expanded -->
-  <div class="sidebar-container" style="text-align: center">
-    <div class="expanded-sidebar" *ngIf="!isCollapsed">
-      <div
-        style="
-          background-color: #d9d9d9;
-          height: 30px;
-          width: 30px;
-          border-radius: 10px;
-        "
-      ></div>
-      <div
-        style="
-          background-color: #d9d9d9;
-          height: 30px;
-          width: 30px;
-          margin-top: 15px;
-          border-radius: 10px;
-        "
-      ></div>
-      <div></div>
+  <div class="sidebar-container">
+    <div class="expanded-sidebar" style="width: 100%" *ngIf="!isCollapsed">
+      <div style="display: flex; flex-direction: row; padding: 0.8rem">
+        <div style="padding-left: 10px">
+          <mat-icon>forum</mat-icon>
+        </div>
+        <div style="padding-left: 10px" class="menu-item-text">Chat</div>
+      </div>
+      <div style="display: flex; flex-direction: row; padding: 0.8rem">
+        <div style="padding-left: 10px">
+          <mat-icon>summarize</mat-icon>
+        </div>
+        <div style="padding-left: 10px" class="menu-item-text">Summary</div>
+      </div>
+      <div style="display: flex; flex-direction: row; padding: 0.8rem">
+        <div style="padding-left: 10px">
+          <mat-icon>group</mat-icon>
+        </div>
+        <div style="padding-left: 10px" class="menu-item-text">
+          User Management
+        </div>
+      </div>
     </div>
     <!-- Div container when sidebar not expanded -->
     <div class="collapsed-sidebar" *ngIf="isCollapsed">
       <div
         style="
-          background-color: #d9d9d9;
-          height: 30px;
-          width: 30px;
-          border-radius: 10px;
+          display: flex;
+          flex-direction: row;
+          padding: 0.8rem;
+          margin: 0 auto;
         "
-      ></div>
-      <div
-        style="
-          background-color: #d9d9d9;
-          height: 30px;
-          width: 30px;
-          margin-top: 15px;
-          border-radius: 10px;
-        "
-      ></div>
+      >
+        <div>
+          <mat-icon>forum</mat-icon>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: row; padding: 0.8rem">
+        <div>
+          <mat-icon>summarize</mat-icon>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: row; padding: 0.8rem">
+        <div>
+          <mat-icon>group</mat-icon>
+        </div>
+      </div>
     </div>
   </div>
   <div class="sidebar-indicator">
